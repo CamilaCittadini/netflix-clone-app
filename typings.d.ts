@@ -31,3 +31,27 @@ export interface Element {
     | "Trailer"
     | "Teaser";
 }
+
+export interface MovieDataResponse {
+  videos: { results: VideoResponse[] | undefined };
+  vote_average: number;
+  release_date: string;
+  first_air_date: string;
+  overview: string;
+  genres: Genre[];
+  original_language: string;
+  vote_count: number;
+}
+
+export interface VideoResponse {
+  id: string;
+  iso_639_1: string;
+  iso_3166_1: string;
+  key: string;
+  name: string;
+  official: boolean;
+  published_at: Date;
+  site: string;
+  size: number;
+  type: Element["type"];
+}
