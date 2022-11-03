@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 
 interface Inputs {

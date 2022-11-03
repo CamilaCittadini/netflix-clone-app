@@ -3,11 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Header } from "../components/Header";
 import { Banner } from "../components/Banner";
+import { Modal } from "../components/Modal";
 import requests from "../utils/requests";
 import { Movie } from "../typings";
 import { Row } from "../components/Row";
 import { listenerCount } from "process";
 import useAuth from "../hooks/useAuth";
+import { useRecoilValue } from "recoil";
+import { modalState, movieState } from "../atoms/modalAtom";
 
 interface Props {
   netflixOriginals: Movie[];
@@ -32,6 +35,9 @@ const Home = ({
 }: Props) => {
   const { logout, loading } = useAuth();
 
+  //using recoil instead of useState
+  const showModal = useRecoilValue(modalState);
+
   if (loading) return null;
 
   return (
@@ -54,7 +60,7 @@ const Home = ({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
-      {/* Modal */}
+      {showModal && <Modal />}
     </div>
   );
 };
