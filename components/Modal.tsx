@@ -55,8 +55,6 @@ const Modal = () => {
     );
   }, [data]);
 
-  console.log("data", data);
-
   return (
     <MuiModal
       open={showModal}
