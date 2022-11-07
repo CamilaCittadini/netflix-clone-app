@@ -55,3 +55,11 @@ export interface VideoResponse {
   size: number;
   type: Element["type"];
 }
+
+export interface NetflixPlans {
+  type: string;
+  videoQuality: string;
+  resolution: string;
+  price: string;
+  portability: boolean;
+}

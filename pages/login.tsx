@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { Plans } from "../components/Plans";
 import useAuth from "../hooks/useAuth";
 
 interface Inputs {
@@ -11,7 +12,8 @@ interface Inputs {
 }
 
 const Login = () => {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState<boolean>(false);
+  const [showPlans, setShowPlans] = useState<boolean>(false);
   const { signIn, signUp } = useAuth();
   const {
     register,
@@ -58,7 +60,7 @@ const Login = () => {
               className="input"
               {...register("email", { required: true })}
             />
-            {errors.password && (
+            {errors.email && (
               <p className="p-1 text-[13px] font-light text-orange-500">
                 Please enter a valid email.
               </p>
@@ -89,12 +91,13 @@ const Login = () => {
           <button
             type="submit"
             className="text-white hover:underline"
-            onClick={() => setLogin(false)}
+            onClick={() => setShowPlans(true)}
           >
             Sign up now
           </button>
         </div>
       </form>
+      <Plans showPlans={showPlans} setShowPlans={setShowPlans} />
     </div>
   );
 };
