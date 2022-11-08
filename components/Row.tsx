@@ -5,8 +5,6 @@ import { useRef, useState } from "react";
 
 interface Props {
   title: string;
-  //when using firebase
-  //movie: Movie | DocumentData [];
   movies: Movie[];
 }
 
