@@ -3,8 +3,6 @@ import { Movie } from "../typings";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { modalState, movieState } from "../atoms/modalAtom";
 interface Props {
-  //when using firebase
-  //movie: Movie | DocumentData;
   movie: Movie;
 }
 const Thumbnail = ({ movie }: Props) => {

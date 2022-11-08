@@ -46,7 +46,7 @@ const Account = () => {
           <Membership />
           <div className="mt-6 grid grid-cols-1 gap-x-4 border px-4 py-4 md:grid-cols-4 md:border-x-0 md:border-t md:border-b-0 md:px-0 md:pb-0">
             <h4 className="text-lg text-[gray]">Plan Details</h4>
-            {/*The user's plan should stored in a DB to be mapped here*/}
+            {/*The user's plan should be stored in a DB to be mapped here*/}
             <div className="col-span-2 font-medium">
               Basic | Standard | Premium
             </div>

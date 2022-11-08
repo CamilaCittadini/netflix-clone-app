@@ -41,7 +41,6 @@ export default function BasicMenu() {
         <MenuItem onClick={handleClose}>TV Shows</MenuItem>
         <MenuItem onClick={handleClose}>Movies</MenuItem>
         <MenuItem onClick={handleClose}>New & Popular</MenuItem>
-        <MenuItem onClick={handleClose}>My List</MenuItem>
       </Menu>
     </div>
   );
